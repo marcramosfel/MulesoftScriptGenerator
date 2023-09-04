@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>csv_to_type_logical module &#8212; Documentação Mulesoft Scrip Generator 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f63d8bfa" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=c4403577"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=3b002d5c"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Documentação Mulesoft Scrip Generator 1.0.0</span></a></h1>
+        <h2 class="heading"><span>csv_to_type_logical module</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        <a class="uplink" href="../index.html">Conteúdo</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="module-csv_to_type_logical">
+<span id="csv-to-type-logical-module"></span><h1>csv_to_type_logical module<a class="headerlink" href="#module-csv_to_type_logical" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="csv_to_type_logical.capitalize_first">
+<span class="sig-prename descclassname"><span class="pre">csv_to_type_logical.</span></span><span class="sig-name descname"><span class="pre">capitalize_first</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv_to_type_logical.capitalize_first" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna a string com a primeira letra em maiúscula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>str</em>) – String de entrada.</p>
+</dd>
+<dt class="field-even">Retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>String com a primeira letra em maiúscula.</p>
+</dd>
+<dt class="field-odd">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csv_to_type_logical.lowercase_first_letter">
+<span class="sig-prename descclassname"><span class="pre">csv_to_type_logical.</span></span><span class="sig-name descname"><span class="pre">lowercase_first_letter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv_to_type_logical.lowercase_first_letter" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna a string com a primeira letra em minúscula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>str</em>) – String de entrada.</p>
+</dd>
+<dt class="field-even">Retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>String com a primeira letra em minúscula.</p>
+</dd>
+<dt class="field-odd">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csv_to_type_logical.process_csv_file">
+<span class="sig-prename descclassname"><span class="pre">csv_to_type_logical.</span></span><span class="sig-name descname"><span class="pre">process_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csv_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv_to_type_logical.process_csv_file" title="Link to this definition">¶</a></dt>
+<dd><p>Processa o arquivo CSV fornecido e gera um arquivo DataWeave com base nos dados.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csv_file_path</strong> (<em>str</em>) – Caminho do arquivo CSV de entrada.</p></li>
+<li><p><strong>output_directory</strong> (<em>str</em>) – Diretório onde o arquivo DataWeave será salvo.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Levanta<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – Se o arquivo CSV não for encontrado.</p></li>
+<li><p><strong>KeyError</strong> – Se um tipo de dado não for encontrado na lista de dbtypes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="csv_to_type_logical.process_csv_files">
+<span class="sig-prename descclassname"><span class="pre">csv_to_type_logical.</span></span><span class="sig-name descname"><span class="pre">process_csv_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv_to_type_logical.process_csv_files" title="Link to this definition">¶</a></dt>
+<dd><p>Processa todos os arquivos CSV em um diretório fornecido.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_directory</strong> (<em>str</em>) – Diretório contendo arquivos CSV.</p></li>
+<li><p><strong>output_directory</strong> (<em>str</em>) – Diretório onde os arquivos DataWeave serão salvos.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        <a class="uplink" href="../index.html">Conteúdo</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Marcos Ramos.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.5.
+    </div>
+  </body>
+</html>
