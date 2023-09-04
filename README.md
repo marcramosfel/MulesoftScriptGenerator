@@ -8,6 +8,19 @@
 
 Este script é um utilitário que fornece um menu interativo para executar uma série de programas relacionados ao MuleSoft. Ele tem a capacidade de executar scripts individualmente ou em conjunto, de acordo com a escolha do usuário.
 
+### Início Rápido
+
+Navegue até a pasta `dist`.
+Execute o arquivo `mulesoft_generator_script.exe` para iniciar o programa.
+Siga as instruções na interface do programa para completar as ações desejadas.
+
+### Documentação
+Para uma compreensão detalhada do funcionamento deste programa e suas funcionalidades, consulte a documentação incluída:
+
+Navegue até a pasta documentation_build\html.
+Abra o arquivo index.html em seu navegador de preferência.
+Isso abrirá a documentação completa do MuleSoft Script Generator, onde você pode explorar todas as seções e obter informações detalhadas sobre cada recurso.
+
 ### Requisitos:
 
 - Python 3.x

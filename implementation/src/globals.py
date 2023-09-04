@@ -3,7 +3,13 @@ ROOT_DIRECTORY = "implementation\\utils"  # Diretório raiz
 str: Caminho para o diretório raiz onde estão localizados os utilitários.
 """
 
-INPUT_CSV_FILE = "references\\inputCSV\\IES_CSV.csv"  
+# Defina o caminho do arquivo
+file_path = "implementation\\src\\config.txt"
+
+# Leia o conteúdo do arquivo
+with open(file_path, 'r') as file:
+    INPUT_CSV_FILE = file.read()
+
 """
 str: Caminho para o arquivo CSV de entrada que contém referências.
 """

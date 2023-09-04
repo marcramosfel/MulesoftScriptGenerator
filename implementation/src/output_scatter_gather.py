@@ -59,8 +59,7 @@ output application/java
         return script
     except Exception as e:
         print(colored(f"Ocorreu um erro ao gerar o script: {e}", "red"))
-        return None
-
+        exit()
 def save_to_file(content, output_file_path):
     """
     Salva o conteúdo em um arquivo especificado.
@@ -81,6 +80,7 @@ def save_to_file(content, output_file_path):
             file.write(content)
     except Exception as e:
         print(colored(f"Ocorreu um erro ao salvar o arquivo: {e}", "red"))
+        exit()
 
 if __name__ == "__main__":
     directory_path = globals.OUTPUT_DIRECTORY_OUTPUT_RAML  # Substitua pelo caminho do seu diretório
@@ -93,3 +93,4 @@ if __name__ == "__main__":
             print(colored(f"Resultado salvo em {output_file_path}", "green"))
     except Exception as e:
         print(colored(f"Ocorreu um erro inesperado: {e}", "red"))
+        exit()

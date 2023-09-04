@@ -58,8 +58,10 @@ def process_raml_file(csv_file_path, output_directory):
         print(colored(f"\nRAML data type gerado e salvo como '{output_raml}'\n", 'green'))
 
     except Exception as e:
-        print(colored(f"Erro ao processar arquivo '{csv_file_path}': {e}", 'red'))
-
+        message= (colored(f"Erro ao processar arquivo '{csv_file_path}': {e}", 'red'))
+        print(message)
+        return(message)
+    
 def generate_raml_datatype(rows):
     """
     Gera um tipo de dado RAML a partir das linhas fornecidas.
@@ -128,4 +130,6 @@ if __name__ == "__main__":
     try:
         process_raml_files(input_directory, output_directory)
     except Exception as e:
-        print(colored(f"Ocorreu um erro geral: {e}", 'red'))
+        message = colored(f"Ocorreu um erro geral: {e}", 'red')
+        print(message)
+        

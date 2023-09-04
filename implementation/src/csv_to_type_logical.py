@@ -131,8 +131,10 @@ dataIn: vars.var{capitalize_table_name}.{capitalize_table_name} map (index, i) -
         print(colored(f"Erro: Arquivo {csv_file_path} não encontrado.", 'red'))
     except KeyError:
         print(colored(f"Erro: Tipo de dado não encontrado na lista dbtypes para {csv_file_path}.", 'red'))
+        exit()
     except Exception as e:
         print(colored(f"Erro ao processar {csv_file_path}: {e}", 'red'))
+        exit()
 
 def process_csv_files(input_directory, output_directory):
     """
@@ -159,3 +161,4 @@ if __name__ == "__main__":
         process_csv_files(input_directory, output_directory)
     except Exception as e:
         print(colored("Ocorreu um erro inesperado: ", 'red'), e)
+        exit()

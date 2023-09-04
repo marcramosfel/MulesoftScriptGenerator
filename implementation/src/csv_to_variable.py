@@ -84,8 +84,10 @@ output application/java
 
     except FileNotFoundError:
         print(colored(f"Erro: Arquivo {csv_file_path} não encontrado.", 'red'))
+        exit()
     except Exception as e:
         print(colored(f"Erro ao processar {csv_file_path}: {e}", 'red'))
+        exit()
 
 def process_csv_files(input_directory, output_directory):
     """
@@ -110,3 +112,4 @@ if __name__ == "__main__":
         process_csv_files(input_directory, output_directory)
     except Exception as e:
         print(colored("Ocorreu um erro inesperado: ", 'red'), e)
+        exit()
