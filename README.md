@@ -12,6 +12,9 @@ Este script é um utilitário que fornece um menu interativo para executar uma s
 
 - Python 3.x
 - Biblioteca `termcolor`
+- Biblioteca `codecs`
+- Biblioteca `os`
+- Biblioteca `csv`
 
 ### Como usar:
 
