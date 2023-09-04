@@ -43,10 +43,5 @@ Aqui estão os programas que este utilitário pode executar:
 - `output_scatter_gather.py`: Gera um código de saída para um bloco scatter-gather.
 - `globals.py`: Define constantes e variáveis globais para o projeto.
 
-### Contribuição:
-
-Se você deseja contribuir para este projeto, sinta-se à vontade para fazer um fork, realizar suas alterações e criar um Pull Request.
-
----
 
 Espero que isso ajude a esclarecer o propósito e o uso dos scripts contidos neste projeto. Por favor, lembre-se de sempre fazer backup de seus arquivos e testar os scripts em um ambiente seguro antes de usar em produção.
