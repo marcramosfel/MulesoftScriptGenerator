@@ -1,6 +1,7 @@
 import os
 from termcolor import colored
 import globals
+     
 
 def remove_files_in_directory(directory_path):
     """
@@ -28,6 +29,7 @@ def remove_files_in_directory(directory_path):
                 remove_files_in_directory(file_path)
     except Exception as e:
         print(colored(f"Erro ao tentar remover arquivos em {directory_path}: {e}", "red"))
+        exit()
 
 def main():
     """

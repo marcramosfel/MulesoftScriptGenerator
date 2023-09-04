@@ -35,15 +35,14 @@ def generate_code_from_directory(directory_path):
     
     except Exception as e:
         print(colored(f"Ocorreu um erro ao gerar código a partir do diretório: {e}", "red"))
-        return None
-
+        exit()
 def save_to_file(content, output_file_path):
     try:
         with open(output_file_path, 'w') as file:
             file.write(content)
     except Exception as e:
         print(colored(f"Ocorreu um erro ao salvar o arquivo: {e}", "red"))
-
+        exit()
 if __name__ == "__main__":
     directory_path = globals.OUTPUT_DIRECTORY_OUTPUT_VARS  # substitua pelo caminho do seu diretório
     output_file_path = globals.OUTPUT_FILE_PATH_FINAL_TRANSFORM_MESSAGE  # substitua pelo caminho/nome do arquivo de saída desejado
@@ -55,3 +54,4 @@ if __name__ == "__main__":
             print(colored(f"\n\nResultado salvo em {output_file_path}\n", "green"))
     except Exception as e:
         print(colored(f"Ocorreu um erro inesperado: {e}", "red"))
+        exit()

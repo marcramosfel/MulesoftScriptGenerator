@@ -57,5 +57,7 @@ if __name__ == "__main__":
     
     except FileNotFoundError:
         print(colored(f"Diretório '{input_directory}' não encontrado.", "red"))
+        exit()
     except Exception as e:
         print(colored(f"Ocorreu um erro inesperado: {e}", "red"))
+        exit()

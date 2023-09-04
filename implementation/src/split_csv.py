@@ -42,10 +42,10 @@ def read_csv_data(input_csv_file):
     
     except FileNotFoundError:
         print(colored(f"Erro: Não foi possível encontrar o arquivo '{input_csv_file}'", 'red'))
-        return None
+        exit()
     except Exception as e:
         print(colored(f"Erro ao ler o arquivo CSV: {e}", 'red'))
-        return None
+        exit()
 
 def create_output_csv(data_by_aggregator, output_directory):
     """
@@ -86,6 +86,7 @@ def create_output_csv(data_by_aggregator, output_directory):
         print(colored(f"Erro ao escrever o arquivo CSV: {e}", 'red'))
 
 if __name__ == "__main__":
+    print(globals.INPUT_CSV_FILE)
     input_csv_file =  globals.INPUT_CSV_FILE 
     output_directory = globals.OUTPUT_DIRECTORY_INPUT_CSV
 
