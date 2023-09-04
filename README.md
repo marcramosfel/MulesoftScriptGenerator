@@ -18,7 +18,7 @@ Este script é um utilitário que fornece um menu interativo para executar uma s
 1. Certifique-se de ter todos os programas listados na lista `programs_to_run` no local correto.
 2. Execute o script principal:
 ```
-python nome_do_script_principal.py
+python main.py
 ```
 3. Um menu será exibido mostrando todos os programas disponíveis para execução. Escolha a opção desejada digitando o número correspondente.
 
