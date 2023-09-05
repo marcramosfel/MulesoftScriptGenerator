@@ -6,7 +6,7 @@
 
 ### Descrição:
 
-Este script é um utilitário que fornece um menu interativo para executar uma série de programas relacionados ao MuleSoft. Ele tem a capacidade de executar scripts individualmente ou em conjunto, de acordo com a escolha do usuário que facilitaram a escrita de código Mulesoft dwl.
+Este script é um utilitário que fornece um menu interativo para executar uma série de programas relacionados ao MuleSoft. Ele tem a capacidade de executar scripts individualmente ou em conjunto, de acordo com a escolha do usuário que facilitarão a escrita de código Mulesoft dwl.
 
 
 🚀 **Guia de Configuração e Execução do Mulesoft Script Generator** 🚀
