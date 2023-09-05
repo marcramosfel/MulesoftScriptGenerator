@@ -79,6 +79,78 @@ Este script é um utilitário que fornece um menu interativo para executar uma s
 
 3. Um menu será exibido. Escolha a opção desejada.
 
+Claro! Integrando o exemplo de CSV ao trecho de documentação anterior:
+
+---
+
+### **Documentação para Importação de Tabelas**
+
+---
+
+#### **1. Introdução**
+
+Esta documentação fornece um guia detalhado sobre como importar tabelas usando nosso sistema. A importação é feita através de arquivos CSV que devem seguir um padrão específico para garantir que a leitura seja realizada com sucesso.
+
+---
+
+#### **2. Formato do CSV**
+
+O arquivo CSV usado para a importação deve seguir o formato especificado abaixo:
+
+```
+Tabela,Campo,Tipo de dados,Agregador
+```
+
+---
+
+#### **3. Exemplo de CSV**
+
+Aqui está um exemplo de como o CSV de input deve ser formatado:
+
+```csv
+Tabela,Campo,Tipo de dados,Agregador
+tabela_A,campoA_id,bigint,tabela_A
+tabela_A,campo_nome,varchar,tabela_A
+tabela_A,campo_coluna,nchar,tabela_A
+tabela_A,campo_data1,date,tabela_A
+tabela_A,campo_data2,real,tabela_A
+tabela_A,campo_data3,timestamp,tabela_A
+tabela_A,campo_data4_SOMA,sqlxml,tabela_A
+tabela_A,campo_data5,boolean,tabela_A
+tabela_A,campo_data6,clob,tabela_A
+tabela_A,campo_data7_SOMA,blob,tabela_A
+tabela_A,campo_data8,numeric,tabela_A
+tabela_A,campo_data9,datetime2,tabela_A
+tabela_A,campo_data10,float,tabela_A
+tabela_A,campo_data11,int,tabela_A
+tabela_A,campo_data12,tinyint,tabela_A
+tabela_A,campo_data13,time_with_timezone,tabela_A
+tabela_A,campo_data14,decimal,tabela_A
+tabela_A,campo_data15,datalink,tabela_A
+tabela_A,campo_data16_SOMA,varbinary,tabela_A
+tabela_A,campo_data17,java_object,tabela_A
+tabela_A,campo_data18,time,tabela_A
+tabela_A,campo_data19,timestamp_with_timezone,tabela_A
+tabela_A,campo_data20,ref_cursor,tabela_A
+tabela_A,campo_data21,struct,tabela_A
+tabela_A,campo_data22_SOMA,longvarbinary,tabela_A
+tabela_A,campo_data23_SOMA,other,tabela_A
+tabela_A,campo_data24,smallint,tabela_A
+tabela_A,campo_data25,ref,tabela_A
+tabela_A,campo_data26,double,tabela_A
+tabela_A,campo_data27,bit,tabela_A
+tabela_A,data_criacao,nvarchar,tabela_A
+tabela_A,id_criador,binary,tabela_A
+
+```
+
+---
+
+#### **4. Instruções de Importação**
+
+1. **Preparação do CSV**: Antes de iniciar a importação, certifique-se de que o arquivo CSV esteja formatado corretamente conforme o exemplo acima.
+2. **Acess
+
 ## Funções
 
 - `run_program(filename)`: Executa um programa específico.
