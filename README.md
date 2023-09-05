@@ -139,15 +139,8 @@ tabela_A,campo_data26,double,tabela_A
 tabela_A,campo_data27,bit,tabela_A
 tabela_A,data_criacao,nvarchar,tabela_A
 tabela_A,id_criador,binary,tabela_A
-
 ```
-
 ---
-
-#### **4. Instruções de Importação**
-
-1. **Preparação do CSV**: Antes de iniciar a importação, certifique-se de que o arquivo CSV esteja formatado corretamente conforme o exemplo acima.
-2. **Acess
 
 ## Funções
 
