@@ -10,11 +10,12 @@ file_path = "implementation\\src\\config.txt"
 with open(file_path, 'r') as file:
     INPUT_CSV_FILE = file.read()
 
+#INPUT_CSV_FILE = "implementation\\utils\\inputCsv"
 """
 str: Caminho para o arquivo CSV de entrada que contém referências.
 """
 
-OUTPUT_DIRECTORY_INPUT_CSV = "implementation\\utils\\inputCSV"
+OUTPUT_DIRECTORY_INPUT_CSV = "implementation\\utils\\inputCsv"
 """
 str: Diretório de saída onde os arquivos CSV de entrada são salvos.
 """

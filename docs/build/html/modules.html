@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="pt" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>src &#8212; Documentação Mulesoft Script Generator 1.0</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modules';</script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Pesquisar" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="pt"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Documentação Mulesoft Script Generator 1.0</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Baixe esta página">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/modules.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixar arquivo fonte"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir em PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo tela cheia"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>src</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="src">
+<h1>src<a class="headerlink" href="#src" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="create_datatype.html">create_datatype module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="create_datatype.html#create_datatype.generate_yaml"><code class="docutils literal notranslate"><span class="pre">generate_yaml()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="csv_to_raml.html">csv_to_raml module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_raml.html#csv_to_raml.generate_raml_datatype"><code class="docutils literal notranslate"><span class="pre">generate_raml_datatype()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_raml.html#csv_to_raml.lowercase_first_letter"><code class="docutils literal notranslate"><span class="pre">lowercase_first_letter()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_raml.html#csv_to_raml.process_raml_file"><code class="docutils literal notranslate"><span class="pre">process_raml_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_raml.html#csv_to_raml.process_raml_files"><code class="docutils literal notranslate"><span class="pre">process_raml_files()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="csv_to_type_logical.html">csv_to_type_logical module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_type_logical.html#csv_to_type_logical.capitalize_first"><code class="docutils literal notranslate"><span class="pre">capitalize_first()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_type_logical.html#csv_to_type_logical.lowercase_first_letter"><code class="docutils literal notranslate"><span class="pre">lowercase_first_letter()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_type_logical.html#csv_to_type_logical.process_csv_file"><code class="docutils literal notranslate"><span class="pre">process_csv_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_type_logical.html#csv_to_type_logical.process_csv_files"><code class="docutils literal notranslate"><span class="pre">process_csv_files()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="csv_to_variable.html">csv_to_variable module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_variable.html#csv_to_variable.capitalize_first"><code class="docutils literal notranslate"><span class="pre">capitalize_first()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_variable.html#csv_to_variable.lowercase_first_letter"><code class="docutils literal notranslate"><span class="pre">lowercase_first_letter()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_variable.html#csv_to_variable.process_csv_file"><code class="docutils literal notranslate"><span class="pre">process_csv_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="csv_to_variable.html#csv_to_variable.process_csv_files"><code class="docutils literal notranslate"><span class="pre">process_csv_files()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="globals.html">globals module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.DATA_TYPE_MAP_SQL_TYPES_TO_EXAMPLES"><code class="docutils literal notranslate"><span class="pre">DATA_TYPE_MAP_SQL_TYPES_TO_EXAMPLES</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.DATA_TYPE_MAP_SQL_TYPES_TO_RAML"><code class="docutils literal notranslate"><span class="pre">DATA_TYPE_MAP_SQL_TYPES_TO_RAML</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.DBTYPES_LIST"><code class="docutils literal notranslate"><span class="pre">DBTYPES_LIST</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.EXCLUDED_FIELDS"><code class="docutils literal notranslate"><span class="pre">EXCLUDED_FIELDS</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.INPUT_CSV_FILE"><code class="docutils literal notranslate"><span class="pre">INPUT_CSV_FILE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_DIRECTORY_INPUT_CSV"><code class="docutils literal notranslate"><span class="pre">OUTPUT_DIRECTORY_INPUT_CSV</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_DIRECTORY_OUTPUT_FINAL_DATATYPE"><code class="docutils literal notranslate"><span class="pre">OUTPUT_DIRECTORY_OUTPUT_FINAL_DATATYPE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_DIRECTORY_OUTPUT_RAML"><code class="docutils literal notranslate"><span class="pre">OUTPUT_DIRECTORY_OUTPUT_RAML</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_DIRECTORY_OUTPUT_TYPE_LOGICAL"><code class="docutils literal notranslate"><span class="pre">OUTPUT_DIRECTORY_OUTPUT_TYPE_LOGICAL</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_DIRECTORY_OUTPUT_VARS"><code class="docutils literal notranslate"><span class="pre">OUTPUT_DIRECTORY_OUTPUT_VARS</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_FILE_PATH_FINAL_OUTPUT_SCATTER"><code class="docutils literal notranslate"><span class="pre">OUTPUT_FILE_PATH_FINAL_OUTPUT_SCATTER</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_FILE_PATH_FINAL_SCATTER"><code class="docutils literal notranslate"><span class="pre">OUTPUT_FILE_PATH_FINAL_SCATTER</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.OUTPUT_FILE_PATH_FINAL_TRANSFORM_MESSAGE"><code class="docutils literal notranslate"><span class="pre">OUTPUT_FILE_PATH_FINAL_TRANSFORM_MESSAGE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html#globals.ROOT_DIRECTORY"><code class="docutils literal notranslate"><span class="pre">ROOT_DIRECTORY</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mainTerminal.html">mainTerminal module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mainTerminal.html#mainTerminal.ProgramRunner"><code class="docutils literal notranslate"><span class="pre">ProgramRunner</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mainTerminal.html#mainTerminal.ProgramRunner.display_menu"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.display_menu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mainTerminal.html#mainTerminal.ProgramRunner.run_all"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.run_all()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mainTerminal.html#mainTerminal.ProgramRunner.run_program"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.run_program()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mainTerminal.html#mainTerminal.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mulesoft_generator_script.html">mulesoft_generator_script module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner"><code class="docutils literal notranslate"><span class="pre">ProgramRunner</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner.get_csv_from_config"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.get_csv_from_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner.remove_csv"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.remove_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner.run_all_programs"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.run_all_programs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner.run_program"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.run_program()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner.setup_ui"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.setup_ui()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner.update_ui_state"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.update_ui_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.ProgramRunner.upload_csv"><code class="docutils literal notranslate"><span class="pre">ProgramRunner.upload_csv()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mulesoft_generator_script.html#mulesoft_generator_script.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="output_scatter_gather.html">output_scatter_gather module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="output_scatter_gather.html#output_scatter_gather.capitalize_first"><code class="docutils literal notranslate"><span class="pre">capitalize_first()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output_scatter_gather.html#output_scatter_gather.generate_script"><code class="docutils literal notranslate"><span class="pre">generate_script()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="output_scatter_gather.html#output_scatter_gather.save_to_file"><code class="docutils literal notranslate"><span class="pre">save_to_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="remove_all_files.html">remove_all_files module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="remove_all_files.html#remove_all_files.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="remove_all_files.html#remove_all_files.remove_files_in_directory"><code class="docutils literal notranslate"><span class="pre">remove_files_in_directory()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="split_csv.html">split_csv module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="split_csv.html#split_csv.create_output_csv"><code class="docutils literal notranslate"><span class="pre">create_output_csv()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="split_csv.html#split_csv.read_csv_data"><code class="docutils literal notranslate"><span class="pre">read_csv_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="type_logical_to_scatter_gather.html">type_logical_to_scatter_gather module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="type_logical_to_scatter_gather.html#type_logical_to_scatter_gather.capitalize_first"><code class="docutils literal notranslate"><span class="pre">capitalize_first()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type_logical_to_scatter_gather.html#type_logical_to_scatter_gather.generate_code_from_directory"><code class="docutils literal notranslate"><span class="pre">generate_code_from_directory()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type_logical_to_scatter_gather.html#type_logical_to_scatter_gather.generate_transform_block"><code class="docutils literal notranslate"><span class="pre">generate_transform_block()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type_logical_to_scatter_gather.html#type_logical_to_scatter_gather.save_to_file"><code class="docutils literal notranslate"><span class="pre">save_to_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="variable_to_transform_message.html">variable_to_transform_message module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_to_transform_message.html#variable_to_transform_message.capitalize_first"><code class="docutils literal notranslate"><span class="pre">capitalize_first()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_to_transform_message.html#variable_to_transform_message.generate_code_from_directory"><code class="docutils literal notranslate"><span class="pre">generate_code_from_directory()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_to_transform_message.html#variable_to_transform_message.insert_into_set_variable"><code class="docutils literal notranslate"><span class="pre">insert_into_set_variable()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_to_transform_message.html#variable_to_transform_message.save_to_file"><code class="docutils literal notranslate"><span class="pre">save_to_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+De Marcos Ramos
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Marcos Ramos.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
