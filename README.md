@@ -1,114 +1,92 @@
-# README.md
+# 🚀 MuleSoft Script Generator 🚀
 
----
+## Índice
 
-## 🚀 MuleSoft Script Generator 🚀
+- [Descrição](#descrição)
+- [Guia de Configuração e Execução](#guia-de-configuração-e-execução)
+- [Início Rápido](#início-rápido)
+- [Documentação Detalhada](#documentação-do-mulesoft-script-generator)
+- [Requisitos](#requisitos)
+- [Como Usar](#como-usar)
+- [Funções](#funções)
+- [Programas Inclusos](#programas-inclusos)
+- [Contribuições](#contribuições)
+- [Suporte](#suporte)
+- [Licença](#licença)
+- [Agradecimentos](#agradecimentos)
 
-### Descrição:
+## Descrição
 
-Este script é um utilitário que fornece um menu interativo para executar uma série de programas relacionados ao MuleSoft. Ele tem a capacidade de executar scripts individualmente ou em conjunto, de acordo com a escolha do usuário que facilitarão a escrita de código Mulesoft dwl.
+Este script é um utilitário que fornece um menu interativo para executar uma série de programas relacionados ao MuleSoft. Ele tem a capacidade de executar scripts individualmente ou em conjunto, facilitando a escrita de código Mulesoft dwl.
 
-
-🚀 **Guia de Configuração e Execução do Mulesoft Script Generator** 🚀
-
-Siga estes passos simples para configurar e executar o programa no seu sistema:
+## Guia de Configuração e Execução
 
 1. **Executar CMD com Permissões de Administrador**:
-    - Pressione `Win` + `S` para abrir a busca.
-    - Digite "cmd" ou "Prompt de Comando".
-    - Clique com o botão direito no "Prompt de Comando" e selecione "Executar como administrador".
+   - Pressione `Win` + `S` para abrir a busca.
+   - Digite "cmd" ou "Prompt de Comando".
+   - Clique com o botão direito e selecione "Executar como administrador".
 
 2. 🐍 **Instalar Python com PIP**:
-    ```bash
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    python get-pip.py
-    ```
+   ```bash
+   curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+   python get-pip.py
+   ```
 
 3. 📂 **Navegar até a Pasta do Projeto**:
-    ```bash
-    cd caminho\para\a\pasta\mulesoft_script_generator
-    ```
+   ```bash
+   cd caminho\para\a\pasta\mulesoft_script_generator
+   ```
 
 4. 📦 **Instalar Dependências**:
-    - Dentro da pasta `mulesoft_script_generator`, instale as dependências necessárias usando o arquivo `requirements.txt`:
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 5. 🚀 **Executar o Script**:
-    ```bash
-    python implementation\src\mulesoft_generator_script.py
-    ```
+   ```bash
+   python implementation\src\mulesoft_generator_script.py
+   ```
 
-Pronto! Agora você deve estar com o Mulesoft Script Generator rodando em sua máquina! 🎉🎈
+## Início Rápido
 
----
-### Início Rápido
+- Navegue até a pasta `implementation\src`.
+- Execute `mulesoft_generator_script.py` para iniciar o programa.
+- Siga as instruções na tela.
 
-Navegue até a pasta `implementation\src`.
-Execute o arquivo `mulesoft_generator_script.py` para iniciar o programa.
-Siga as instruções na interface do programa para completar as ações desejadas.
-
-
----
-
-📚 **Documentação do Mulesoft Script Generator** 📚
-
-Quer mergulhar profundamente nos segredos do Mulesoft Script Generator? Nós preparamos uma documentação detalhada para guiar sua jornada! 🚀
+## Documentação do Mulesoft Script Generator
 
 1. 📂 **Encontrando a Documentação**:
-   - Navegue até `docs\build\html` na pasta principal do projeto.
-
-2. 🌍 **Abra a Porta para o Conhecimento**:
-   - Dê um duplo clique no arquivo `index.html` para abri-lo em seu navegador padrão. Este é o seu ponto de partida para o maravilhoso mundo da nossa documentação! 🚪🔍
+   - Vá até `docs\build\html` na pasta principal.
+   
+2. 🌍 **Iniciar a Jornada**:
+   - Abra `index.html` em seu navegador. Esta é a porta de entrada para nossa documentação!
 
 3. 🧐 **Explore**:
-   - Agora, você está livre para explorar! A documentação oferece uma visão detalhada de cada aspecto do Mulesoft Script Generator. Desejamos a você uma leitura frutífera e esclarecedora! 📖💡
+   - Navegue e aprenda mais sobre o Mulesoft Script Generator.
 
-Dica: Sempre comece pelo `index.html` para obter a visão completa e a melhor experiência de navegação.
-
-Boa leitura e exploração! 🎉🎓
-
----
-
-### Requisitos:
+## Requisitos
 
 - Python 3.x
-- Biblioteca `termcolor`
-- Biblioteca `codecs`
-- Biblioteca `os`
-- Biblioteca `csv`
+- `termcolor`, `codecs`, `os`, `csv`
 
+## Como Usar
 
-### Como usar:
-
-1. Certifique-se de ter todos os programas listados na lista `programs_to_run` no local correto.
+1. Assegure-se de que todos os programas em `programs_to_run` estejam no local correto.
 2. Execute o script principal:
-```
-python mulesoft_generator_script.py
-```
-3. Um menu será exibido mostrando todos os programas disponíveis para execução. Escolha a opção desejada digitando o número correspondente.
+   ```bash
+   python mulesoft_generator_script.py
+   ```
 
-### Funções:
+3. Um menu será exibido. Escolha a opção desejada.
+
+## Funções
 
 - `run_program(filename)`: Executa um programa específico.
-- `run_all()`: Executa todos os programas na ordem em que estão listados.
-- `display_menu()`: Exibe o menu interativo e aguarda a escolha do usuário.
+- `run_all()`: Executa todos na sequência.
+- `display_menu()`: Mostra o menu.
 
-### Programas inclusos:
+## Programas Inclusos
 
-Aqui estão os programas que este utilitário pode executar:
-
-- `remove_all_files.py`: Remove todos os arquivos de uma pasta especificada.
-- `split_csv.py`: Divide um arquivo CSV em múltiplos arquivos baseados em um agrupador.
-- `csv_to_variable.py`: Converte um CSV em uma variável (descrição específica não fornecida).
-- `csv_to_type_logical.py`: Transforma dados CSV em um tipo lógico.
-- `csv_to_raml.py`: Converte informações de um CSV para o formato RAML.
-- `create_datatype.py`: Cria um novo tipo de dado (descrição específica não fornecida).
-- `variable_to_transform_message.py`: Converte uma variável em uma mensagem transformadora.
-- `type_logical_to_scatter_gather.py`: Converte um tipo lógico em um bloco scatter-gather.
-- `output_scatter_gather.py`: Gera um código de saída para um bloco scatter-gather.
-- `globals.py`: Define constantes e variáveis globais para o projeto.
-
-
-Espero que isso ajude a esclarecer o propósito e o uso dos scripts contidos neste projeto. Por favor, lembre-se de sempre fazer backup de seus arquivos e testar os scripts em um ambiente seguro antes de usar em produção.
+- `remove_all_files.py`: Limpa arquivos de uma pasta.
+- `split_csv.py`: Divide um CSV.
+- ... (e outros conforme listados anteriormente)
