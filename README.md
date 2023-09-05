@@ -79,9 +79,7 @@ Este script é um utilitário que fornece um menu interativo para executar uma s
 
 3. Um menu será exibido. Escolha a opção desejada.
 
-Claro! Integrando o exemplo de CSV ao trecho de documentação anterior:
 
----
 
 ### **Documentação para Importação de Tabelas**
 
