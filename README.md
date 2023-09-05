@@ -78,26 +78,17 @@ Boa leitura e exploração! 🎉🎓
 
 - Python 3.x
 - Biblioteca `termcolor`
-<<<<<<< Updated upstream
-=======
 - Biblioteca `codecs`
 - Biblioteca `os`
 - Biblioteca `csv`
-- Biblioteca `tkinter`
 
-
->>>>>>> Stashed changes
 
 ### Como usar:
 
 1. Certifique-se de ter todos os programas listados na lista `programs_to_run` no local correto.
 2. Execute o script principal:
 ```
-<<<<<<< Updated upstream
-python nome_do_script_principal.py
-=======
 python mulesoft_generator_script.py
->>>>>>> Stashed changes
 ```
 3. Um menu será exibido mostrando todos os programas disponíveis para execução. Escolha a opção desejada digitando o número correspondente.
 
@@ -122,10 +113,5 @@ Aqui estão os programas que este utilitário pode executar:
 - `output_scatter_gather.py`: Gera um código de saída para um bloco scatter-gather.
 - `globals.py`: Define constantes e variáveis globais para o projeto.
 
-### Contribuição:
-
-Se você deseja contribuir para este projeto, sinta-se à vontade para fazer um fork, realizar suas alterações e criar um Pull Request.
-
----
 
 Espero que isso ajude a esclarecer o propósito e o uso dos scripts contidos neste projeto. Por favor, lembre-se de sempre fazer backup de seus arquivos e testar os scripts em um ambiente seguro antes de usar em produção.
