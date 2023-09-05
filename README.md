@@ -49,9 +49,6 @@ Navegue até a pasta `implementation\src`.
 Execute o arquivo `mulesoft_generator_script.py` para iniciar o programa.
 Siga as instruções na interface do programa para completar as ações desejadas.
 
-Claro! Aqui está um guia passo a passo para o `README`:
-
----
 
 ---
 
