@@ -20,7 +20,7 @@ def generate_yaml(files):
     yaml += "uses:\n  objectLibrary: libs/object.raml\n\nproperties:\n"
 
     for filename in files:
-        name_without_extension = os.path.splitext(filename)[0]
+        name_without_extension = os.path.splitext(filename)[0].replace("-datatype", "")
 
         if name_without_extension.endswith("[]"):
             name_without_extension = name_without_extension.replace("[]", "")

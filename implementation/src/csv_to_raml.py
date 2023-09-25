@@ -48,7 +48,8 @@ def process_raml_file(csv_file_path, output_directory):
             rows = [row for row in csv_reader]
 
         file_name = os.path.basename(csv_file_path).split('.')[0]
-        output_raml = os.path.join(output_directory, f"{file_name}.raml")
+        output_raml = os.path.join(output_directory, f"{file_name}-datatype.raml")
+        print(output_raml)
 
         raml_data = generate_raml_datatype(rows)
 
