@@ -1,0 +1,1 @@
+Pasta onde estará o output final das variáveis para colar no conector transform message.

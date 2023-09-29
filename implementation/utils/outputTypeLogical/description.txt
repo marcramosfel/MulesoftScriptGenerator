@@ -1,0 +1,1 @@
+Pasta onde estará o output final do type logical para colar nos diferentes type logicals.
