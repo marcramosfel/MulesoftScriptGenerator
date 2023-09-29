@@ -6,6 +6,9 @@ import globals
 
 dbtypes_list = globals.DBTYPES_LIST
 
+def first_letter_lowercase_list(strings):
+    return [s[0].lower() + s[1:] if s else s for s in strings]
+
 def capitalize_first(s):
     """
     Retorna a string com a primeira letra em maiúscula.
@@ -77,7 +80,7 @@ def process_csv_file(csv_file_path, output_directory):
         table_name_without_brackets = table_name.replace("[]", "")
         table_name_withot_underscore = table_name.replace("_", "")
         table_name_withot_underscore_ID = table_name_withot_underscore.replace("[]", "") + "Id"
-        capitalize_table_name = capitalize_first(table_name)
+        capitalize_table_name = capitalize_first(table_name_without_brackets)
 
         output_file_path = os.path.join(output_directory, f"{table_name_without_brackets}.dwl")
         
@@ -94,17 +97,19 @@ output application/json
         excluded_fields = [table_name_withot_underscore_ID]
         excluded_fields.extend(globals.EXCLUDED_FIELDS)
 
+        excluded_fields_lower_case = first_letter_lowercase_list(excluded_fields)
+        print(excluded_fields, excluded_fields_lower_case)
         for row in csv_rows:
             field_name = row['Campo']
             db_type = str(row['Tipo de dados'])
             db_type = db_type.replace("?", "") if db_type.endswith("?") else db_type
             #print(dbtypes_list.get(db_type))
-            if field_name not in excluded_fields:
-                dw_code += f'{{\n       dbName: "{field_name}",\n       dbType: {dbtypes_list.get(db_type, "Unknown")}\n   }},'
+            if field_name not in excluded_fields and field_name not in excluded_fields_lower_case:
+                dw_code += f'{{\n       dbName: "{capitalize_first(field_name)}",\n       dbType: {dbtypes_list.get(db_type, "Unknown")}\n   }},'
 
         dw_code = dw_code.rstrip(",\n")
         dw_code += f'''],
-dataIn: vars.var{capitalize_table_name}.{capitalize_table_name} map (index, i) -> [
+dataIn: vars.spInTypes.{capitalize_table_name} map (index, i) -> [
 '''
 
         for row in csv_rows:
