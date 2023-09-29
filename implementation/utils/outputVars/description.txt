@@ -1,0 +1,1 @@
+Pasta onde estaram as variavies separadas de cada mapeamento de cada agregador para colar no primeiro transform message.

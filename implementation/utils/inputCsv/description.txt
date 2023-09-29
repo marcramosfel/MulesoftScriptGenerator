@@ -1,0 +1,1 @@
+Pasta onde estarão os csvs divididos, e que serão usados como input para os restantes códigos.
