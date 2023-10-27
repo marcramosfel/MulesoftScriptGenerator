@@ -9,17 +9,21 @@ class ProgramRunner:
     def __init__(self, root, programs):
         self.root = root
         self.programs = programs
-        self.program_buttons = {}
+        self.program_buttons = {}                
+
         self.setup_ui()
 
     def create_action_buttons(self):
-        self.run_all_button = self.create_button(self.root, "Executar Todos os Scripts", self.run_all_programs)
-        self.run_all_button.grid(row=3, column=0, columnspan=2, pady=10, sticky="nsew")  # Adicione sticky aqui
+        self.run_all_button = self.create_button(self.root, "Executar Todos os Scripts", self.run_all_programs, bg="#4CAF50")  # Cor verde
+        self.run_all_button.grid(row=3, column=0, columnspan=2, pady=10, sticky="nsew")
         
         # Criar botões para cada programa
         for idx, (program_name, filepath) in enumerate(self.programs.items(), start=4):
-            btn = self.create_button(self.root, program_name, lambda fp=filepath: self.run_program(fp))
-            btn.grid(row=idx, column=0, columnspan=2, pady=5, sticky="nsew")  # Adicione sticky aqui
+            btn_color = "#4e89ae"
+            if "Remover" in program_name:
+                btn_color = "#FF0000"  # Cor vermelha
+            btn = self.create_button(self.root, program_name, lambda fp=filepath: self.run_program(fp), bg=btn_color)
+            btn.grid(row=idx, column=0, columnspan=2, pady=5, sticky="nsew")
             self.program_buttons[program_name] = btn
 
     def get_csv_from_config(self):
@@ -27,6 +31,13 @@ class ProgramRunner:
             with open(CONFIG_FILE, 'r') as f:
                 return f.read().strip()
         return None
+
+    def run_programs(self, filepath):
+        try:
+            os.system(f"python {filepath}")
+        except Exception as e:
+            self.show_message("Erro", f"Erro ao executar {filepath}: {str(e)}")
+        self.update_ui_state()
 
     def run_program(self, filepath):
         try:
@@ -49,7 +60,8 @@ class ProgramRunner:
         self.root.grid_columnconfigure(0, weight=1)  # Coluna principal
 
     def create_header(self):
-        tk.Label(self.root, text="🚀 MuleSoft Script Generator 🚀", font=("Arial", 16), bg="#f0f4f7").grid(row=0, column=0, columnspan=2, pady=20)
+        tk.Label(self.root, text="🚀 MuleSoft Script Generator 🚀", font=("Arial", 40), bg="#f0f4f7").grid(row=0, column=0, columnspan=2, pady=10)  # Fonte maior e padding menor
+
 
     def create_csv_display_area(self):
         self.csv_text = self.create_text_widget(self.root, height=2, width=40)
@@ -57,12 +69,18 @@ class ProgramRunner:
 
     def create_control_buttons(self):
         self.upload_button = self.create_button(self.root, "Carregar CSV", self.upload_csv)
-        self.upload_button.grid(row=2, column=0, padx=20, pady=10)
+        
+        # Estique o botão para preencher todo o espaço horizontal na célula da grade
+        self.upload_button.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
+        
         self.remove_csv_button = self.create_button(self.root, "Remover CSV", self.remove_csv)
-        self.remove_csv_button.grid(row=2, column=1, padx=20, pady=10)
+        self.remove_csv_button.grid(row=2, column=1, padx=10, pady=10, sticky="ew")
 
-    def create_button(self, parent, text, command):
-        return tk.Button(parent, text=text, command=command, bg="#4e89ae", fg="white", font=("Arial", 12))
+        # Ajustar a coluna para que ela use todo o espaço disponível
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_columnconfigure(1, weight=1)
+    def create_button(self, parent, text, command, bg="#4e89ae"):
+        return tk.Button(parent, text=text, command=command, bg=bg, fg="white", font=("Arial", 22))
 
     def create_text_widget(self, parent, **kwargs):
         text_widget = tk.Text(parent, **kwargs, bg="#e0e7ee")
@@ -78,13 +96,13 @@ class ProgramRunner:
             with open(CONFIG_FILE, 'w') as f:
                 f.write(filepath)
             self.update_ui_state()
-            messagebox.showinfo("Sucesso", f"Arquivo CSV carregado de: {filepath}")
+            #messagebox.showinfo("Sucesso", f"Arquivo CSV carregado de: {filepath}")
 
     def remove_csv(self):
         if os.path.exists(CONFIG_FILE):
             os.remove(CONFIG_FILE)
             self.update_ui_state()
-            messagebox.showinfo("Sucesso", "Caminho do CSV removido com sucesso!")
+            #messagebox.showinfo("Sucesso", "Caminho do CSV removido com sucesso!")
 
     def update_ui_state(self):
         csv_path = self.get_csv_from_config()
@@ -107,7 +125,9 @@ class ProgramRunner:
    
     def run_all_programs(self):
         for program_name, filepath in self.programs.items():
-            self.run_program(filepath)
+            self.run_programs(filepath)
+        self.show_message(f"Sucesso", "Todos os programas foram executado com sucesso!")
+
 
 def main():
     programs_to_run = {
@@ -123,7 +143,6 @@ def main():
     }
 
     root = ThemedTk(theme="arc")
-    
     runner = ProgramRunner(root, programs_to_run)
     root.mainloop()
 
