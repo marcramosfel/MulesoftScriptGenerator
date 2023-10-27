@@ -13,18 +13,24 @@ class ProgramRunner:
 
         self.setup_ui()
 
+    
     def create_action_buttons(self):
+        
         self.run_all_button = self.create_button(self.root, "Executar Todos os Scripts", self.run_all_programs, bg="#4CAF50")  # Cor verde
         self.run_all_button.grid(row=3, column=0, columnspan=2, pady=10, sticky="nsew")
-        
-        # Criar botões para cada programa
-        for idx, (program_name, filepath) in enumerate(self.programs.items(), start=4):
-            btn_color = "#4e89ae"
-            if "Remover" in program_name:
-                btn_color = "#FF0000"  # Cor vermelha
-            btn = self.create_button(self.root, program_name, lambda fp=filepath: self.run_program(fp), bg=btn_color)
-            btn.grid(row=idx, column=0, columnspan=2, pady=5, sticky="nsew")
-            self.program_buttons[program_name] = btn
+
+        # Dropdown for program buttons
+        self.dropdown_var = tk.StringVar()
+        self.dropdown = ttk.Combobox(self.root, textvariable=self.dropdown_var, values=list(self.programs.keys())[1:], font=("Arial", 22))
+        self.dropdown.grid(row=4, column=0, columnspan=2, pady=5, sticky="nsew")
+        self.dropdown.bind("<<ComboboxSelected>>", self.dropdown_selected)
+
+        self.remove_all_button = self.create_button(self.root, "Remover todos os arquivos", lambda: self.run_program(self.programs["Remover todos os arquivos"]), bg="#FF0000")
+        self.remove_all_button.grid(row=5, column=0, columnspan=2, pady=5, sticky="nsew")
+
+    def dropdown_selected(self, event):
+        selected_program = self.dropdown_var.get()
+        self.run_program(self.programs[selected_program])
 
     def get_csv_from_config(self):
         if os.path.exists(CONFIG_FILE):
@@ -68,6 +74,7 @@ class ProgramRunner:
         self.csv_text.grid(row=1, column=0, columnspan=2, padx=20, pady=10)
 
     def create_control_buttons(self):
+        
         self.upload_button = self.create_button(self.root, "Carregar CSV", self.upload_csv)
         
         # Estique o botão para preencher todo o espaço horizontal na célula da grade
@@ -79,6 +86,7 @@ class ProgramRunner:
         # Ajustar a coluna para que ela use todo o espaço disponível
         self.root.grid_columnconfigure(0, weight=1)
         self.root.grid_columnconfigure(1, weight=1)
+        
     def create_button(self, parent, text, command, bg="#4e89ae"):
         return tk.Button(parent, text=text, command=command, bg=bg, fg="white", font=("Arial", 22))
 
@@ -109,17 +117,18 @@ class ProgramRunner:
         self.csv_text.config(state=tk.NORMAL, bg="#e0e7ee")
         self.csv_text.delete(1.0, tk.END)
 
+
         if csv_path:
             self.csv_text.insert(tk.END, csv_path)
             self.csv_text.config(bg='#FFD700')
-
             self.run_all_button.grid(row=3, column=0, columnspan=2, pady=10)
-            for idx, btn in enumerate(self.program_buttons.values(), start=4):
-                btn.grid(row=idx, column=0, columnspan=2, pady=5)
+            self.dropdown.grid(row=4, column=0, columnspan=2, pady=5, sticky="nsew")
+            self.remove_all_button.grid(row=5, column=0, columnspan=2, pady=5, sticky="nsew")
         else:
             self.run_all_button.grid_remove()
-            for btn in self.program_buttons.values():
-                btn.grid_remove()
+            self.dropdown.grid_remove()
+            self.remove_all_button.grid_remove()
+
 
         self.csv_text.config(state=tk.DISABLED)
    
