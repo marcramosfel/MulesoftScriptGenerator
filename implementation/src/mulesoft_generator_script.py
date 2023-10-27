@@ -15,7 +15,6 @@ class ProgramRunner:
 
     
     def create_action_buttons(self):
-        
         self.run_all_button = self.create_button(self.root, "Executar Todos os Scripts", self.run_all_programs, bg="#4CAF50")  # Cor verde
         self.run_all_button.grid(row=3, column=0, columnspan=2, pady=10, sticky="nsew")
 
@@ -27,6 +26,7 @@ class ProgramRunner:
 
         self.remove_all_button = self.create_button(self.root, "Remover todos os arquivos", lambda: self.run_program(self.programs["Remover todos os arquivos"]), bg="#FF0000")
         self.remove_all_button.grid(row=5, column=0, columnspan=2, pady=5, sticky="nsew")
+    
 
     def dropdown_selected(self, event):
         selected_program = self.dropdown_var.get()
@@ -66,7 +66,7 @@ class ProgramRunner:
         self.root.grid_columnconfigure(0, weight=1)  # Coluna principal
 
     def create_header(self):
-        tk.Label(self.root, text="🚀 MuleSoft Script Generator 🚀", font=("Arial", 40), bg="#f0f4f7").grid(row=0, column=0, columnspan=2, pady=10)  # Fonte maior e padding menor
+        tk.Label(self.root, text="🚀 MuleSoft Script Generator 🚀", font=("Arial", 40), bg="#f0f4f7").grid(row=0, column=0, columnspan=2, sticky="ew")  # Fonte maior e padding menor
 
 
     def create_csv_display_area(self):
@@ -86,7 +86,7 @@ class ProgramRunner:
         # Ajustar a coluna para que ela use todo o espaço disponível
         self.root.grid_columnconfigure(0, weight=1)
         self.root.grid_columnconfigure(1, weight=1)
-        
+
     def create_button(self, parent, text, command, bg="#4e89ae"):
         return tk.Button(parent, text=text, command=command, bg=bg, fg="white", font=("Arial", 22))
 
@@ -104,7 +104,7 @@ class ProgramRunner:
             with open(CONFIG_FILE, 'w') as f:
                 f.write(filepath)
             self.update_ui_state()
-            #messagebox.showinfo("Sucesso", f"Arquivo CSV carregado de: {filepath}")
+            messagebox.showinfo("Sucesso", f"Arquivo CSV carregado de: {filepath}")
 
     def remove_csv(self):
         if os.path.exists(CONFIG_FILE):
